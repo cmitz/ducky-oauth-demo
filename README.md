@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisits
 
-Things you may want to cover:
+- Postgresql
+- Ruby (see `.ruby-version`)
+- Bundler
 
-* Ruby version
+## Setup and run
 
-* System dependencies
+```
+$ git clone git@github.com:csvalpha/ducky_oauth_demo.git && cd ducky_oauth_demo
+$ bundle install
+$ bundle exec rails db:setup
+$ bundle exec rails s
+```
 
-* Configuration
+1. Go to http://localhost:3000
+1. Verify you're not able to view the products index
+1. Sign in with a google account
+1. Verify you're logged in and able to view the products index
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*note: **embedded in this repository you can find the credentials (secret and ID) for a Test App registered with Google under my name. Use these credentials wisely to test for yourself, do not distribute them ** *
