@@ -20,4 +20,4 @@ $ bundle exec rails s
 1. Sign in with a google account
 1. Verify you're logged in and able to view the products index
 
-*note: **embedded in this repository you can find the credentials (secret and ID) for a Test App registered with Google under my name. Use these credentials wisely to test for yourself, do not distribute them ** *
+> Note: **Embedded in this repository you can find the credentials (secret and ID) for a Test App registered with Google under my name. Use these credentials wisely to test for yourself, do not distribute them**
