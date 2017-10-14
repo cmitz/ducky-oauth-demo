@@ -1,0 +1,23 @@
+nav.navbar.navbar-expand-md.navbar-light.bg-light
+  a.navbar-brand href='/' 🦆
+  button.navbar-toggler{ type= 'button' data-toggle= 'collapse' data-target= '#mainNavigation'
+                         aria-controls= 'mainNavigation' aria-expanded= 'false' aria-label= 'Toggle navigation'}
+    span.navbar-toggler-icon
+
+  .collapse.navbar-collapse id='mainNavigation'
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        = link_to 'Home', root_path, class: 'nav-link'
+      li.nav-item
+        = link_to 'Products', products_path, class: 'nav-link'
+
+
+    - if current_user
+      .navbar-text.mr-1
+        = "Signed in as #{current_user.name} "
+      .navbar-text.small
+        = link_to ' (sign out)', destroy_user_session_path, method: :delete
+
+    - else
+      span.navbar-text
+        = link_to 'Sign in with Google', user_google_oauth2_omniauth_authorize_path

@@ -1,0 +1,27 @@
+.container.py-sm-3
+  .row.justify-content-center
+    .card.col-sm-4
+
+      .card-body
+        h4.card-title
+          h2 = 'Log in'
+
+        p.card-text = 'Log in with your Google account'
+
+        = form_tag "/users/sign_in", class: 'new_user form', id: "new_user",  method: "post"
+          .form-group
+            label for="user_email"
+              = 'Email'
+            input.form-control disabled='' autofocus="autofocus" value="" name="user[email]" id="user_email" type="email"
+
+          .form-group
+            label for="user_password"
+              = 'Password'
+            input.form-control disabled='' autocomplete="off" name="user[password]" id="user_password" type="password"
+
+
+          .button-group.clearfix
+            .g-signin2.float-left data-onsuccess="onSignIn"
+
+            button.btn.btn-primary.float-right disabled='' data-disable-with="Log in" type="submit"
+              = 'Log in'

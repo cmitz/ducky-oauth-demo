@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Rails OAuth
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = csrf_meta_tags
+    script src="https://apis.google.com/js/platform.js" async='async' defer='defer'
+    meta name="google-signin-client_id" content="#{Rails.application.secrets.fetch(:google_client_id)}"
+
+  body
+
+    = render partial: 'partials/navigation_bar'
+
+    == yield
