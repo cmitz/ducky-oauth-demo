@@ -3,6 +3,7 @@ Devise.setup do |config|
 
   require 'devise/orm/active_record'
 
+  require "omniauth-google-oauth2"
   config.omniauth :google_oauth2, Rails.application.secrets.fetch(:google_client_id), Rails.application.secrets.fetch(:google_client_secret), {
     scope: 'email'
   }
